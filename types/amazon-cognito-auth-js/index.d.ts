@@ -1,4 +1,4 @@
-// Type definitions for amazon-cognito-auth-js 1.2
+// Type definitions for amazon-cognito-auth-js 1.2.1
 // Project: https://github.com/aws/amazon-cognito-auth-js, http://aws.amazon.com/cognito
 // Definitions by: Scott Escue <https://github.com/scottescue>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
@@ -48,7 +48,7 @@ export interface CognitoSessionData {
     /**
      * The session's state.
      */
-    State?: string;
+    State?: string;    
 }
 
 export interface CognitoAuthOptions {
@@ -91,6 +91,11 @@ export interface CognitoAuthOptions {
      * Optional: boolean flag indicating if the data collection is enabled to support cognito advanced security features. By default, this flag is set to true.
      */
     AdvancedSecurityDataCollectionFlag?: boolean;
+    
+    /**
+     * Optional: storage object to store the tokens. Defaults to localStorage.
+     */
+    Storage?: Storage
 }
 
 export interface CognitoAuthUserHandler {
